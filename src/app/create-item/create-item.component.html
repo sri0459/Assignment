@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Add Item Here</mat-card-title>
+      </mat-card-header>
+<form [formGroup]="ItemForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+        <label>Name</label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Name" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Description</label>
+        <input type="text" formControlName="description" class="form-control" placeholder="description" required>
+    </div>
+
+    <div class="mb-3">
+        <label>price</label>
+        <input type="number" formControlName="price" class="form-control" placeholder="price" required>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+
+    </form>
+
+</mat-card>

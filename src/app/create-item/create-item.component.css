@@ -1,0 +1,7 @@
+.example-card {
+    max-width: 411px;
+    align-items: center;
+    border-radius: 24px;
+    position: relative;
+    left: 29%;
+}

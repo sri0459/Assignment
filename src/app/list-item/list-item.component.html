@@ -1,0 +1,26 @@
+<mat-card>
+    <table class="table">
+        <thead>
+           <tr>
+               <th scope="col">Sn.No</th>
+               <th scope="col">Name</th>
+               <th scope="col">Description</th>
+               <th scope="col">Price</th>
+               <th scope="col">Action</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let item of Item;let i=index">
+               <th scope="row">{{i+1}}</th>
+               <td>{{item.name}}</td>
+               <td>{{item.description}}</td>
+               <td>{{item.price}}</td>
+               <td>
+                   <span (click)="removeItem(item)" class="btn btn-danger">Delete</span>&nbsp;
+                   <span routerLink="/update-item/{{item.id}}" class="btn btn-primary">Modify</span>
+               </td> 
+           </tr>
+        </tbody>
+       </table>
+       
+</mat-card>
